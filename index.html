@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5f0"><title>Ateliê Aura | Piercings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="shop-page">
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark store-icon">A</span><span><b class="store-name">Ateliê Aura</b><small>PIERCINGS & JOIAS</small></span></a><div class="shop-actions"><button class="cart-open" id="open-cart">Carrinho <span id="cart-count">0</span></button></div></header>
+  <main>
+    <section class="hero"><div class="hero-copy"><span class="eyebrow">CURADORIA DE JOIAS</span><h1>Detalhes que<br><i>contam histórias.</i></h1><p>Encontre sua próxima joia favorita. Explore nossa seleção de piercings com cuidado e personalidade.</p><a class="hero-cta" href="#colecao">Explorar coleção <span>↓</span></a></div><div class="hero-art"><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div><span class="art-spark">✳</span><span class="art-label">FEITO PARA<br>BRILHAR</span><img id="hero-custom-image" class="hero-custom-image hidden" alt="Imagem de destaque da loja"></div></section>
+    <section id="colecao" class="collection"><div class="collection-head"><div><span class="eyebrow">NOSSA SELEÇÃO</span><h2>Peças disponíveis</h2></div><span id="count" class="count"></span></div>
+      <div class="toolbar"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Buscar por código, material ou tamanho"></label><select id="category-filter" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option><option value="Aço">Aço</option><option value="Titânio">Titânio</option></select><select id="subcategory-filter" aria-label="Filtrar por subcategoria"><option value="">Todas as subcategorias</option></select><select id="sort" aria-label="Ordenar"><option value="newest">Mais recentes</option><option value="code">Código (A–Z)</option></select></div>
+      <div id="grid" class="product-grid"></div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark store-icon">A</span><span><b class="store-name">Ateliê Aura</b><small>PIERCINGS & JOIAS</small></span></a><div id="store-info-public" class="store-info-public"><p>Joias para expressar quem você é.</p></div><span>© <span id="year"></span> <span class="store-name">Ateliê Aura</span></span></footer>
+  <button class="mobile-cart-bar" id="open-cart-mobile" type="button">Ver orçamento <span id="mobile-cart-count">0 itens</span><b id="mobile-cart-total">R$ 0,00</b></button>
+  <dialog id="detail" class="detail-dialog"><button type="button" class="close" aria-label="Fechar">×</button><div id="detail-content"></div></dialog>
+  <dialog id="cart-dialog" class="cart-dialog"><button type="button" class="close" id="close-cart" aria-label="Fechar">×</button><div class="cart-heading"><span class="eyebrow">SEU ORÇAMENTO</span><h2>Meu orçamento</h2></div><div id="cart-items"></div><div class="cart-footer"><div class="cart-summary"><div><span>Quantidade de peças</span><b id="cart-total">0</b></div><div><span>Total do pedido</span><b id="cart-subtotal">R$ 0,00</b></div></div><button id="checkout" class="button primary">Solicitar orçamento <span>→</span></button><small id="checkout-hint" class="help"></small></div></dialog>
+  <dialog id="customer-dialog" class="customer-dialog"><button type="button" class="close" id="close-customer" aria-label="Fechar">×</button><div class="customer-heading"><span class="eyebrow">SOLICITAR ORÇAMENTO</span><h2>Dados do cliente</h2><p>Preencha seus dados para enviar seu orçamento à loja pelo WhatsApp.</p></div><form id="customer-form"><label>Nome completo<input id="customer-name" autocomplete="name" required maxlength="100" placeholder="Seu nome completo"></label><div class="field-row"><label>CPF<input id="customer-cpf" inputmode="numeric" autocomplete="off" required maxlength="14" placeholder="000.000.000-00"></label><label>Telefone<input id="customer-phone" inputmode="tel" autocomplete="tel" required maxlength="16" placeholder="(00) 00000-0000"></label></div><label>Endereço<input id="customer-address" autocomplete="street-address" required maxlength="120" placeholder="Rua, avenida, bairro e cidade"></label><div class="field-row"><label>Número<input id="customer-number" required maxlength="12" placeholder="Número"></label><label>Complemento <span class="optional">(opcional)</span><input id="customer-complement" maxlength="60" placeholder="Apto, bloco, referência"></label></div><p id="customer-error" class="error" role="alert"></p><button type="submit" class="button primary">Enviar orçamento pelo WhatsApp <span>↗</span></button><small class="help customer-privacy">Para localizar o pedido, nome, telefone e endereço ficam registrados neste navegador. O CPF vai apenas na mensagem do WhatsApp; não é salvo no painel.</small></form></dialog>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="supabase-client.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+PUBLICAR A VITRINE — ATELIÊ AURA
+
+Esta pasta contém os arquivos do site para hospedagem estática. O arquivo index.html está na raiz.
+
+ANTES DE ENVIAR O LINK AOS CLIENTES
+1. No Supabase, crie seu usuário em Authentication > Users.
+2. Execute o arquivo supabase-admin-security.sql da pasta original do catálogo. No INSERT comentado ao final, use o e-mail do seu usuário administrador.
+3. Entre em /admin.html com esse e-mail e senha. Confira se as joias e configurações foram sincronizadas.
+4. Faça um pedido de teste e confira se ele aparece na aba Pedidos recebidos.
+
+PUBLICAÇÃO PELO NETLIFY DROP
+1. Acesse https://app.netlify.com/drop e entre ou crie sua conta Netlify.
+2. Arraste a pasta piercing-catalogo-publicar inteira para a área indicada.
+3. Aguarde e copie o endereço público terminado em .netlify.app.
+4. Envie esse endereço ao cliente. Para administrar, acrescente /admin.html ao mesmo endereço e entre com a conta Supabase autorizada.
+
+Produtos, imagens, personalização e pedidos são sincronizados pelo Supabase. Alterações nos arquivos do site precisam ser publicadas novamente. Não compartilhe senha nem use chave secret/service_role no navegador.
